@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import {useEffect,useState} from 'react'
 const PREFIX='clone'
 function Uselocal(key,initialValue) {
     const prefixedKey=PREFIX+key
