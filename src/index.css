@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+ 
+}
+.top-pane{
+  background-color:hsl(225,6%,25%);
+
+}
+.pane{
+  height:50vh;
+  display: flex;
+
+}
+.editor-container{
+  flex-grow:1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction:column;
+  padding: .5rem;
+  background-color:hsl(225,6%,25%);
+}
+.editor-title{
+  display: flex;
+  justify-content:space-between;
+  background-color: hsl(225,6%,13%);
+  color: white;
+  padding: .5rem .5rem .5rem 1rem;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+}
+.CodeMirror{
+  height: 100% !important;
+}
+.code-wrapper{
+  flex-grow: 1;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  overflow: scroll;
+}
+.code-wrapper::-webkit-scrollbar{
+  width:0;
+}
+.CodeMirror-vscrollbar{
+  width:0 !important;
+}
+.editor-container.collapsed{
+  flex-grow:0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll{
+  position: absolute;
+}
+.CodeMirror-scroll::-webkit-scrollbar{
+  width: 0;
+}
+.btn{
+  margin-left:.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.pane.output{
+  flex-direction: column;
+}
+.pane.output::-webkit-scrollbar{
+  width: 0;
+}
+.pane.output.closing{
+  z-index: 1000;
+  height: 100vh;
+}
+.pane.top-pane.closing{
+  display: none;
+}
+.editor-title.output
+{
+  border-radius: 0%;
+}
+.file-type-icon{
+  width:20px;
+  height: 20px;
+}
